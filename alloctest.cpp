@@ -40,6 +40,11 @@ status_t testAllocate(int size) {
 }
 
 int main() {
-    testAllocate(4096);
+    status_t res = testAllocate(4096);
+    if (res == OK) {
+        printf("Yay\n");
+    } else {
+        printf("Nay\n");
+    }
     return 0;
 }
